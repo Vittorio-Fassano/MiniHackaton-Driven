@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
+    
+    <title>Clima-FLU</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Clima e Temperatura</h1>
+            <div class="separador-horizontal"></div>
+            <h2 id="city">Sua Cidade</h2>
+            
+            <div class="img">
+            <img id="weathericon" src="">
+            </div>  
+
+            <div class="temp">
+                <p id="tempNum">??°C</p>
+            </div>
+
+            <span id="weather">Tempo</span>
+            <span id="tempMinMax">??°C/??°C</span>
+
+            <div class="separador-horizontal"></div>
+
+            <div class="inputs">
+            <input class="cityInput" type="text" placeholder="Digite sua cidade aqui..." onchange="getWeatherFromInput()"></input>
+            <button onclick="getWeatherFromInput()">Consultar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

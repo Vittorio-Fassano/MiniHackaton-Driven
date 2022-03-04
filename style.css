@@ -1,0 +1,97 @@
+body {
+    background-color: #e5e5e5;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+main section {
+    margin-top: 80px;
+    width: 600px;
+    height: 100%;
+    margin: auto auto;
+    box-shadow: 10px 10px 15px grey;
+    background-color: rgb(158, 193, 204);
+}
+
+main section h1 {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.separador-horizontal {
+    height: 1px;
+    background-color: rgb(207, 200, 200);
+}
+
+main section div.img {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+main section h2 {
+    width: 450px;
+    height: 100%;
+    margin: auto auto;
+    font-size: 46px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+main section div.inputs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+    border-radius: 50px;
+    background-color: rgb(158, 193, 204);
+}
+
+main section div.temp {
+    width: 400px;
+    height: 100%;
+    background-color: rgb(153, 54, 54);
+    margin: auto auto;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: auto auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+span:last-of-type {
+    font-size: 20px;
+    margin-top: 15px;
+    color: grey;
+    margin-bottom: 20px
+}
+
+button {
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+}
