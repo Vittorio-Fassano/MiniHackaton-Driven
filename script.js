@@ -5,7 +5,7 @@ const api = {
 };
 
 function getWeather(latitude, longitude){
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api.key}&units=${api.units}&lang=${api.lang}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api.key}&units=${api.units}&lang=${api.lang}`;
     axios.get(url).then(response => {
         let weather = response.data.weather[0].main;
         let icon = response.data.weather[0].icon;
@@ -17,7 +17,7 @@ function getWeather(latitude, longitude){
         document.querySelector("#tempNum").innerHTML = `${temp}°C`;
         document.querySelector("#weather").innerHTML = weather;
         document.querySelector("#tempMinMax").innerHTML = `${tempMin}°C/${tempMax}°C`;
-        document.querySelector("#weathericon").src=`http://openweathermap.org/img/wn/${icon}@2x.png`;
+        document.querySelector("#weathericon").src=`https://openweathermap.org/img/wn/${icon}@2x.png`;
     })
 }
 
@@ -36,9 +36,8 @@ function rejectPosition(error){
 
 function getWeatherFromInput (){
     const nameCity = document.querySelector(`.cityInput`).value;
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${nameCity}&limit=1&appid=${api.key}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${nameCity}&limit=1&appid=${api.key}`;
     axios.get(url).then(response => {
-        console.log(response)
         getWeather(response.data[0].lat, response.data[0].lon);
     })
 }
