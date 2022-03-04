@@ -7,7 +7,7 @@ const api = {
 function getWeather(latitude, longitude){
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api.key}&units=${api.units}&lang=${api.lang}`;
     axios.get(url).then(response => {
-        let weather = response.data.weather[0].main;
+        let weather = response.data.weather[0].description;
         let icon = response.data.weather[0].icon;
         let city = response.data.name;
         let temp = response.data.main.temp.toFixed(0);
@@ -31,7 +31,7 @@ if(navigator.geolocation){
 }
 
 function rejectPosition(error){
-   alert (`Então digite os dados de sua cidade nos campos abaixo!`);
+    alert (`Então digite os dados de sua cidade nos campos abaixo!`);
 }
 
 function getWeatherFromInput (){
